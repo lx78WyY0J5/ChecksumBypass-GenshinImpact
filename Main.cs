@@ -28,7 +28,7 @@ namespace ChecksumBypass {
         public override void OnApplicationStart() {
             MelonLogger.Msg("Mod loaded.");
             unsafe {
-                var properties = typeof(Object1PublicSealedIEquatable1ObfMJ1ObKJInOCStONKPInUnique).GetProperties(BindingFlags.Instance | BindingFlags.Public);
+                var properties = typeof(Object1PublicSealedIEquatable1ObfEA1ObAHInCJStPBAIInUnique).GetProperties(BindingFlags.Instance | BindingFlags.Public);
 
                 foreach (var property in properties.Where(p => (p.PropertyType == typeof(string)) && (p.SetMethod.CustomAttributes.Count() == 1))) {
                     var originalMethod = property.SetMethod;
@@ -43,7 +43,8 @@ namespace ChecksumBypass {
                             // var checksum2.2 = "601f9d24a9f983df28cdbfe40d6ca4d0c30f8297a7b37ed3b7a082df15aff9771d";
                             // var checksum2.3 = "37dfc56fd2bf5fa0d3ec55b4f2a81d374c9c8c5382645c32f97495469dbf036e1f";
                             // var checksum2.4 = "c1218c188819cba2e794c29c6f5c0f2248eefb4cd29f29b18619e7626f83044a20";
-                            var checksum = "6c0b1b9b176af5f26038400b229381ec952eff387d738841a7940725c457b0ae23";
+                            //var checksum2.5 = "6c0b1b9b176af5f26038400b229381ec952eff387d738841a7940725c457b0ae23";
+                            var checksum = "add7923a4c3fcf73996e7ad12f85a2a7952eff387d738841a7940725c457b0ae23";
                             originalDelegate(instance, IL2CPP.ManagedStringToIl2Cpp(checksum), nativeMethodPointer);
                         } else {
                             originalDelegate(instance, value, nativeMethodPointer);
