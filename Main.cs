@@ -10,11 +10,11 @@ namespace ChecksumBypass {
 
     public static class ModBuildInfo {
         public const string Name = "GenshinChecksumBypass";
-        public const string Author = "nitro.";
-        public const string Version = "1.0.0";
+        public const string Author = "Taiga74164";
+        public const string Version = "1.0.1";
         public const string DownloadLink = null;
         public const string Company = null;
-        public const string GameDeveloper = "miHoYo";
+        public const string GameDeveloper = "HoYoverse";
         public const string Game = "Genshin Impact";
     }
 
@@ -28,7 +28,8 @@ namespace ChecksumBypass {
         public override void OnApplicationStart() {
             MelonLogger.Msg("Mod loaded.");
             unsafe {
-                var properties = typeof(Object1PublicSealedIEquatable1ObfEA1ObAHInCJStPBAIInUnique).GetProperties(BindingFlags.Instance | BindingFlags.Public); //update this yourself
+                // DEOBFUSCATED: Proto.PlayerLoginReq
+                var properties = typeof(Object1PublicSealedIEquatable1ObfPP1ObHHInACStICKIInUnique).GetProperties(BindingFlags.Instance | BindingFlags.Public); 
 
                 foreach (var property in properties.Where(p => (p.PropertyType == typeof(string)) && (p.SetMethod.CustomAttributes.Count() == 1))) {
                     var originalMethod = property.SetMethod;
@@ -46,7 +47,8 @@ namespace ChecksumBypass {
                             // var checksum2.5 = "6c0b1b9b176af5f26038400b229381ec952eff387d738841a7940725c457b0ae23";
                             // var checksum2.6 = "30a4bfb5141a1b779e00b3f69da2ab88952eff387d738841a7940725c457b0ae23";
                             // var checksum2.7 = "14648af3df1f47a7858d3335cf7288b044fed1eba61f15e5acaccda18967a91b23";
-                            var checksum = "ed9fb95b179f957394ef2d984a397f35e8b31b9850496833399c259b358c9ba723";
+                            // var checksum2.8 = "ed9fb95b179f957394ef2d984a397f35e8b31b9850496833399c259b358c9ba723";
+                            var checksum = "c071e821a011fe7a5f6c791d4002dc4b2ed2e864481c6fe2e9db3b6379c18f6b25";
                             originalDelegate(instance, IL2CPP.ManagedStringToIl2Cpp(checksum), nativeMethodPointer);
                         } else {
                             originalDelegate(instance, value, nativeMethodPointer);

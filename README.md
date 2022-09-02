@@ -1,3 +1,13 @@
 # ChecksumBypass-GenshinImpact
-Bypasses the checksum at login to allow modified files in official servers (by: @nitrog0d).
-![unknown](https://user-images.githubusercontent.com/67109235/162325163-4cfe0a41-ef58-40cd-b21f-135ac366595a.png)
+
+### Requirements:
+- Modified version of [MelonLoader](https://github.com/LavaGang/MelonLoader)
+- nameTranslation.txt (optional)
+
+### Usage:
+1. DLL goes inside ``Mods/``
+
+![image](https://user-images.githubusercontent.com/67109235/188243139-e2234a4a-354f-4e75-b818-c4ebff76e253.png)
+
+### Credits:
+[@nitrog0d](https://github.com/nitrog0d) for Melon
